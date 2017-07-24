@@ -1,37 +1,42 @@
 const router        = require('express').Router();
 
-const statics = require('../controllers/statics');
-// const recipes         = require('../controllers/recipes');
+// Require controllers
+const statics       = require('../controllers/statics');
 const sessions      = require('../controllers/sessions');
 const registrations = require('../controllers/registrations');
 
-// function secureRoute(req, res, next){
-//   if(!req.session.userId){
-//     return req.session.regenerate(()=> {
-//       req.flash('danger', 'You must be logged in to view this content');
+
+// function secureRoute(req, res, next) {
+//   if (!req.session.userId) {
+//     return req.session.regenerate(() => {
+//       req.flash('danger', 'You must be logged in.');
 //       res.redirect('/login');
 //     });
 //   }
+//
 //   return next();
 // }
 
 router.route('/')
   .get(statics.homepage);
 
-// router.route('/recipes')
-//   .get(recipes.index)
-//   .post(secureRoute, recipes.create);
+// router.route('/films')
+//   .get(films.index)
+//   .post(secureRoute, films.create);
 //
-// router.route('/recipes/new')
-//   .get(recipes.new);
+// router.route('/films/new')
+//   .get(secureRoute, films.new);
 //
-// router.route('/recipes/:id')
-//   .get(secureRoute, recipes.show)
-//   .put(secureRoute, recipes.update)
-//   .delete(secureRoute, recipes.delete);
+// router.route('/films/:id')
+//   .get(films.show)
+//   .put(secureRoute, films.update)
+//   .delete(secureRoute, films.delete);
 //
-// router.route('/recipes/:id/edit')
-//   .get(recipes.edit);
+// router.route('/films/:id/edit')
+//   .get(secureRoute, films.edit);
+
+router.route('/about')
+  .get(statics.about);
 
 router.route('/register')
   .get(registrations.new)

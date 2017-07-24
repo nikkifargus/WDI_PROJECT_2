@@ -1,6 +1,6 @@
 const User = require('../models/user');
 
-function sessionsNew(req, res){
+function sessionsNew(req, res) {
   res.render('sessions/new');
 }
 
@@ -21,8 +21,7 @@ function sessionsCreate(req, res) {
 }
 
 function sessionsDelete(req, res) {
-  return req.session.regenerate(() =>
-  res.redirect('/'));
+  return req.session.regenerate(() => res.redirect('/'));
 }
 
 module.exports = {
