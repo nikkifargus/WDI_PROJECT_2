@@ -8,10 +8,7 @@ function staticsHomepage(req, res) {
 }
 
 function staticsAbout(req, res) {
-  User
-    .find()
-    .exec()
-    .then((users) => res.render('statics/about', { users }));
+  res.render('statics/about');
 }
 
 module.exports = {

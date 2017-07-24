@@ -4,6 +4,8 @@ const router        = require('express').Router();
 const statics       = require('../controllers/statics');
 const sessions      = require('../controllers/sessions');
 const registrations = require('../controllers/registrations');
+const recipes = require('../controllers/recipes');
+
 
 
 // function secureRoute(req, res, next) {
@@ -18,35 +20,35 @@ const registrations = require('../controllers/registrations');
 // }
 
 router.route('/')
-  .get(statics.homepage);
-
-// router.route('/films')
-//   .get(films.index)
-//   .post(secureRoute, films.create);
-//
-// router.route('/films/new')
-//   .get(secureRoute, films.new);
-//
-// router.route('/films/:id')
-//   .get(films.show)
-//   .put(secureRoute, films.update)
-//   .delete(secureRoute, films.delete);
-//
-// router.route('/films/:id/edit')
-//   .get(secureRoute, films.edit);
+.get(statics.homepage);
 
 router.route('/about')
-  .get(statics.about);
+.get(statics.about);
+
+router.route('/recipes')
+.get(recipes.index)
+.post(recipes.create);
+
+router.route('/recipes/new')
+.get(recipes.new);
+
+router.route('/recipes/:id')
+.get(recipes.show)
+.put(recipes.update)
+.delete(recipes.delete);
+
+router.route('/recipes/:id/edit')
+.get(recipes.edit);
 
 router.route('/register')
-  .get(registrations.new)
-  .post(registrations.create);
+.get(registrations.new)
+.post(registrations.create);
 
 router.route('/login')
-  .get(sessions.new)
-  .post(sessions.create);
+.get(sessions.new)
+.post(sessions.create);
 
 router.route('/logout')
-  .get(sessions.delete);
+.get(sessions.delete);
 
 module.exports = router;
