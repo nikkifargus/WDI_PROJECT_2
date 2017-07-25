@@ -7,6 +7,7 @@
 <a href="/logout">Logout</a>
 
 
+
 <div class="row">
   <% users.forEach((user) => { %>
     <div class="col-md-4">
@@ -16,6 +17,7 @@
           <p class="card-text">
             <%= user.email %>
             <%= user.password %>
+            <a href="/users/<%= user._id %>">Profile</a>
           </p>
         </div>
       </div>

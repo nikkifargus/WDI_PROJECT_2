@@ -10,10 +10,11 @@ function usersShow(req, res) {
         .find({ createdBy: user._id })
         .exec()
         .then(recipes => {
-          res.render('user/show', { user, recipes });
+          res.render('users/show', { user, recipes });
         });
     });
 }
+
 
 module.exports = {
   show: usersShow
