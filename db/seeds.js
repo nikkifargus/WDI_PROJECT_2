@@ -40,8 +40,9 @@ User
         ingredient3: '50g caster sugar',
         step1: 'Rub fat into flour then add sugar',
         step2: 'Roll out on a floured surface and cut out rounds',
-        step3: 'cook at 180C for 20 mins or until golden brown. This will depend on how thin you roll the dough'
-      },{
+        step3: 'cook at 180C for 20 mins or until golden brown. This will depend on how thin you roll the dough',
+        createdBy: users[0]._id
+      }, {
         name: 'Chocolate Ganache',
         image: ['http://img.taste.com.au/hpxXpl8e/taste/2016/11/dark-chocolate-ganache-85514-1.jpeg'],
         description: 'Chocolate ganache is really easy to make and super versatile. Use on cakes, cookies, macarons or even use to make your own chocolate truffels!',
@@ -50,7 +51,8 @@ User
         ingredient3: '50g butter',
         step1: 'Heat cream and butter until boiling',
         step2: 'Break chocolate into pieces and add to the cream',
-        step3: 'Stir until all the chocolate is melted, then allow to cool'
+        step3: 'Stir until all the chocolate is melted, then allow to cool',
+        createdBy: users[1]._id
       }]);
   })
   .then((recipes)=>{

@@ -13,6 +13,9 @@ function recipesNew(req, res) {
 }
 
 function recipesCreate(req, res, next) {
+
+  req.body.createdBy = req.user._id;
+
   Recipe
   .create(req.body)
   .then(()=> res.redirect('/recipes'))
@@ -22,6 +25,8 @@ function recipesCreate(req, res, next) {
 function recipesShow(req, res, next) {
   Recipe
     .findById(req.params.id)
+    .populate('createdBy')
+    .exec()
     .then((recipe) => {
       if(!recipe) return res.status(404).render('statics/404');
       res.render('recipes/show', { recipe });
@@ -63,6 +68,7 @@ function recipesDelete(req, res, next){
     if(!recipe) return res.status(404).render('statics/404');
     return recipe.remove();
   })
+  //change to return to profile page.
   .then(() => res.redirect('/recipes'))
   .catch(next);
 }

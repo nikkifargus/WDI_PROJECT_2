@@ -13,9 +13,11 @@ function sessionsCreate(req, res) {
         return res.status(401).render('sessions/new', { message: 'Unrecognised credentials' });
       }
 
-      req.session.userId = user.id;
+      req.flash('info', `Thanks for logging in, ${user.username}!`);
 
-      req.flash('info', `Welcome back, ${user.username}!`);
+      req.session.userId = user._id;
+
+
       return res.redirect('/');
     });
 }
