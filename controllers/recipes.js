@@ -3,6 +3,7 @@ const Recipe = require('../models/recipe');
 function recipeIndex(req, res, next){
   Recipe
     .find()
+    .populate('createdBy')
     .then((recipes) =>
     res.render('recipes/index', { recipes }))
     .catch(next);

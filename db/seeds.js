@@ -33,7 +33,7 @@ User
     return Recipe
       .create([{
         name: 'Short Bread',
-        image: ['http://www.marshallsfoods.com/wp-content/uploads/shutterstock_153370979-e1452688819427.jpg'],
+        image: 'http://www.marshallsfoods.com/wp-content/uploads/shutterstock_153370979-e1452688819427.jpg',
         description: 'A classic Scottish bisuit. Crumbly, buttery and great with a cup of tea!',
         ingredient1: '150g plain flour',
         ingredient2: '100g unsalted butter',
@@ -44,7 +44,7 @@ User
         createdBy: users[0]._id
       }, {
         name: 'Chocolate Ganache',
-        image: ['http://img.taste.com.au/hpxXpl8e/taste/2016/11/dark-chocolate-ganache-85514-1.jpeg'],
+        image: 'http://img.taste.com.au/hpxXpl8e/taste/2016/11/dark-chocolate-ganache-85514-1.jpeg',
         description: 'Chocolate ganache is really easy to make and super versatile. Use on cakes, cookies, macarons or even use to make your own chocolate truffels!',
         ingredient1: '250g dark chocolate',
         ingredient2: '200g double cream',
