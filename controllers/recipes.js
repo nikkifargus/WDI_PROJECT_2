@@ -13,7 +13,6 @@ function recipesNew(req, res) {
 }
 
 function recipesCreate(req, res, next) {
-
   req.body.createdBy = req.user._id;
 
   Recipe

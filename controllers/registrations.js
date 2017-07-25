@@ -8,7 +8,7 @@ function registrationsCreate(req, res) {
   User
     .create(req.body)
     .then((user) => {
-      req.flash('info', `Thanks for registering, ${user.username}! Please login`);
+      req.flash('info', `Thanks for registering, ${user.username}!`);
       req.session.userId = user._id;
       console.log(user._id);
       return res.redirect('/');
