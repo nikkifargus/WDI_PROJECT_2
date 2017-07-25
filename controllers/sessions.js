@@ -12,11 +12,11 @@ function sessionsCreate(req, res) {
         req.flash('danger', 'Unknown email/password combination');
         return res.status(401).render('sessions/new', { message: 'Unrecognised credentials' });
       }
-
-      req.flash('info', `Thanks for logging in, ${user.username}!`);
-
       req.session.userId = user._id;
       console.log(user._id);
+      req.flash('info', `Thanks for logging in, ${user.username}!`);
+
+
 
       return res.redirect('/');
     });
