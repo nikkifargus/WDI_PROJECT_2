@@ -4,29 +4,37 @@
   <div>
     <div class="">
 
+      <label for="name">Recipe Name</label>
+      <input type="text" name="name" value="name" id="name" placeholder="Recipe Name">
 
-    <input type="text" name="name" value="name" name="recipe name" placeholder="Recipe Name">
+      <label for="image">Image</label>
+      <input type="text" name="image" value="image" id="image" placeholder="Image URL">
 
-    <input type="text" name="image" value="image" name="recipe image" placeholder="Image URL">
-
-    <textarea name="description" placeholder="Short description of your product"></textarea>
+      <label for="description">Short Description</label>
+      <textarea name="description" placeholder="Short description of your product" id="description"></textarea>
     </div>
 
-    <div class="">
-    <input type="text" name="ingredient1" value="ingredient1" name="ingredient1" placeholder="ingredient1">
+    <div class="ingredients">
+      <label for="ingredient1">Ingredient 1</label>
+      <textarea name="ingredient1" placeholder="ingredient1" id="ingredient1"></textarea>
 
-    <input type="text" name="ingredient2" value="ingredient2" name="ingredient2" placeholder="ingredient2">
+      <label for="ingredient2">Ingredient 2</label>
+      <textarea name="ingredient2" placeholder="ingredient2" id="ingredient2"></textarea>
 
-    <input type="text" name="ingredient3" value="ingredient3" name="ingredient3" placeholder="ingredient3">
+      <label for="ingredient3">Ingredient 3</label>
+      <textarea name="ingredient3" placeholder="ingredient3" id="ingredient3"></textarea>
 
-    </div>
-    <div class="">
-    <input type="text" name="step1" value="step1" name="step1" placeholder="step 1">
-
-    <input type="text" name="step2" value="step2" name="step2" placeholder="step 2">
-
-    <input type="text" name="step3" value="step3" name="step3" placeholder="step 3">
-    </div>
   </div>
-  <button type="button" name="button">Create Recipe</button>
+  <div class="method">
+    <label for="step1">Step 1</label>
+    <textarea name="step1" placeholder="step1" id="step1"></textarea>
+
+    <label for="step2">Step 2</label>
+    <textarea name="step2" placeholder="step2" id="step2"></textarea>
+
+    <label for="step3">Step 3</label>
+    <textarea name="step3" placeholder="step3" id="step3"></textarea>
+  </div>
+</div>
+<button type="submit" name="button">Create Recipe</button>
 </form>
