@@ -25,7 +25,7 @@ function recipesCreate(req, res, next) {
 function recipesShow(req, res, next) {
   Recipe
     .findById(req.params.id)
-    .populate('createdBy')
+    .populate('createdBy comments.user')
     .exec()
     .then((recipe) => {
       if(!recipe) return res.status(404).render('statics/404');

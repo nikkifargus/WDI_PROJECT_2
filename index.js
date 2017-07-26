@@ -62,7 +62,7 @@ app.use((req, res, next) => {
       // Re-assign the session id for good measure
       req.session.userId = user._id;
       req.user = user;
-      res.locals.user = user;
+      res.locals.loggedInUser = user;
       res.locals.isLoggedIn = true;
 
       next();

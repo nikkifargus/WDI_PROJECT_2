@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row ">
 
   <div class="showImage col s12 m12 l5">
     <img class="z-depth-3" src="<%= recipe.image %>">
@@ -9,6 +9,20 @@
     <br>
     <h5>Created by: <%= recipe.createdBy.username %></h5>
     <h5><%= recipe.description%></h5>
+
+    <div class="row">
+      <div class="col s6">
+        <% if (recipe.createdBy.id === locals.loggedInUser.id ) { %>
+        <a href="/recipes/<%= recipe.id %>/edit" class="btn btn-primary">Edit</a>
+      </div>
+      <div class="col s6">
+        <form method="POST" action="/recipes/<%= recipe.id %>">
+          <input type="hidden" name="_method" value="DELETE">
+          <button class="btn btn-danger">Delete</button>
+          <% } %>
+        </form>
+      </div>
+    </div>
   </div>
 
 </div>
@@ -34,9 +48,30 @@
     </ul>
   </div>
 </div>
-<a href="/recipes/<%= recipe.id %>/edit" class="btn btn-primary">Edit</a>
 
-<form method="POST" action="/recipes/<%= recipe.id %>">
-  <input type="hidden" name="_method" value="DELETE">
-  <button class="btn btn-danger">Delete</button>
-</form>
+<div class="row">
+  <div class="col s12">
+    <h4>Comments</h4>
+
+    <form action="/recipes/<%= recipe._id %>" method="post">
+      <input type="text" name="body">
+      <input type="submit" value="Post Comment">
+    </form>
+
+    <ul>
+      <% recipe.comments.forEach(comment => { %>
+        <li>
+          <h5><a href="/users/<%= comment.user._id %>"><%= comment.user.username %></a></h5>
+          <p><%= comment.body %></p>
+
+          <% if (comment.user.id === locals.loggedInUser.id || recipe.createdBy.id === locals.loggedInUser.id ) { %>
+          <form action="/recipes/<%= recipe._id %>/comments/<%= comment._id %>" method="post">
+            <input type="hidden" name="_method" value="delete">
+            <input class="btn btn-danger" type="submit" value="Delete Comment">
+          </form>
+          <% } %>
+        </li>
+      <% }) %>
+    </ul>
+  </div>
+</div>

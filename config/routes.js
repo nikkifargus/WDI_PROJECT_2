@@ -4,8 +4,9 @@ const router        = require('express').Router();
 const statics       = require('../controllers/statics');
 const sessions      = require('../controllers/sessions');
 const registrations = require('../controllers/registrations');
-const recipes = require('../controllers/recipes');
-const users = require('../controllers/users');
+const recipes       = require('../controllers/recipes');
+const users         = require('../controllers/users');
+const comments      = require('../controllers/comments');
 
 
 
@@ -35,11 +36,15 @@ router.route('/recipes/new')
 
 router.route('/recipes/:id')
 .get(secureRoute, recipes.show)
+.post(secureRoute, comments.create)
 .put(secureRoute, recipes.update)
 .delete(secureRoute, recipes.delete);
 
 router.route('/recipes/:id/edit')
 .get(secureRoute, recipes.edit);
+
+router.route('/recipes/:recipeId/comments/:commentId')
+  .delete(comments.delete);
 
 router.route('/register')
 .get(registrations.new)

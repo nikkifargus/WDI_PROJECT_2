@@ -1,5 +1,10 @@
 const mongoose = require('mongoose');
 
+const commentSchema = new mongoose.Schema({
+  body: String,
+  user: { type: mongoose.Schema.ObjectId, ref: 'User'}
+});
+
 const recipeSchema = new mongoose.Schema({
   name: { type: String, required: true},
   image: [{type: String}],
@@ -10,6 +15,7 @@ const recipeSchema = new mongoose.Schema({
   step1: { type: String},
   step2: { type: String},
   step3: { type: String},
+  comments: [commentSchema],
   createdBy: {type: mongoose.Schema.ObjectId, ref: 'User'}
 });
 
