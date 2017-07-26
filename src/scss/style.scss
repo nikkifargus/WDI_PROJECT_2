@@ -20,17 +20,31 @@ body {
 //
 // }
 
-.card-text{
-  font-size: 10px;
-}
+
 .showImage {
   margin-top: 30px;
 }
 
+.indexPhotoFrame{
+  width: 200px;
+
+  .indexPhoto{
+    height: 200px;
+    background-color: black;
+    overflow: hidden;
+  }
+  .card-text{
+    font-size: 10px;
+  }
+}
 
 
-p{
-  // font-size: 20px;
-  margin: 0px;
-  padding: 0px;
+.inspirationPhoto{
+  height: 75px;
+  width: 100px;
+}
+
+img{
+  width: 100%;
+  height: 100%;
 }
