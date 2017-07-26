@@ -1,10 +1,20 @@
-<h1>Profile page</h1>
+<h1><%= user.username %>'s Profile Page</h1>
 
-<h2><%= user.username  %></h2>
+<h3>All My Recipes</h3>
 
-<h3>Recipes</h3>
-<ul>
+<div class="row ">
   <% recipes.forEach(recipe => { %>
-    <li><a href="/recipes/<%= recipe._id %>"><%= recipe.name %></a></li>
-  <% }); %>
-</ul>
+    <div class="col s12 m4 l3">
+      <div class="indexPhotoFrame z-depth-3">
+        <div class="indexPhoto">
+          <a href="/recipes/<%= recipe._id%>">
+          <img src="<%= recipe.image %>">
+        </div>
+        <div class="indexInfo">
+          <p> <%= recipe.name %><p>
+          <p>Created By Me!</p>
+        </div>
+      </div>
+    </div>
+  <%}); %>
+</div>

@@ -16,7 +16,7 @@ $(() => {
   .get('http://api.yummly.com/v1/api/recipes?_app_id=336eb706&_app_key=2345f4bf66c4925c8eef59b889c4816d&q=&allowedCourse[]=course^course-Desserts&maxResult=50')
   .done(data => {
     data.matches.forEach(recipe => {
-      $(`<li>${recipe.recipeName}</li><div class="inspirationPhoto"><img src="${ recipe.smallImageUrls}"></div>`).appendTo($('.inspirationLoad'));
+      $(`<div><div class="inspirationPhoto"><img src="${ recipe.smallImageUrls}"></div><div class="inspirationName">${recipe.recipeName}</div></div>`).appendTo($('.inspirationLoad'));
     });
   })
   .fail(() => console.log('error'));
