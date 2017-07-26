@@ -24,6 +24,9 @@ function secureRoute(req, res, next) {
 router.route('/')
 .get(statics.homepage);
 
+router.route('/inspiration')
+.get(statics.inspiration);
+
 router.route('/about')
 .get(statics.about);
 

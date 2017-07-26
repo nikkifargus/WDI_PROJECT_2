@@ -64,7 +64,7 @@
           <h5><a href="/users/<%= comment.user._id %>"><%= comment.user.username %></a></h5>
           <p><%= comment.body %></p>
 
-          <% if (comment.user.id === locals.loggedInUser.id || recipe.createdBy.id === locals.loggedInUser.id ) { %>
+          <% if (comment.user.id === locals.loggedInUser.id ) { %>
           <form action="/recipes/<%= recipe._id %>/comments/<%= comment._id %>" method="post">
             <input type="hidden" name="_method" value="delete">
             <input class="btn btn-danger" type="submit" value="Delete Comment">

@@ -11,7 +11,12 @@ function staticsAbout(req, res) {
   res.render('statics/about');
 }
 
+function staticsInspiration(req, res) {
+  res.render('statics/inspiration');
+}
+
 module.exports = {
   homepage: staticsHomepage,
-  about: staticsAbout
+  about: staticsAbout,
+  inspiration: staticsInspiration
 };
