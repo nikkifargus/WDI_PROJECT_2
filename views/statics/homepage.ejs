@@ -1,27 +1,14 @@
-<h1>Homepage</h1>
-
-
-<a href="/register">Sign Up</a>
-<a href="/login">Login</a>
-<a href="/about">About</a>
-<a href="/logout">Logout</a>
-
-
-
-
-<div class="row">
-  <% users.forEach((user) => { %>
-    <div class="col-md-4">
-    <div class="card">
-    <div class="card-block">
-    <h4 class="card-title"><%= user.username %></h4>
-    <p class="card-text">
-    <%= user.email %>
-    <%= user.password %>
-    <a href="/users/<%= user._id %>">Profile</a>
-    </p>
-    </div>
-    </div>
-    </div>
-    <% }) %>
+<div class="row 1">
+  <div class="col s2"></div>
+  <div class="homeCent col s8">
+    <h1 class="logo">SweetSpot</h1>
+    <%# <img src="/images/logo.jpg" alt="">%>
+    <a href="/register">Sign Up</a>
+    <a href="/login">Login</a>
+    <a href="/about">About</a>
   </div>
+  <div class="col s2"></div>
+
+
+
+</div>

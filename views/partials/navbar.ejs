@@ -1,8 +1,9 @@
-<nav class="">
-  <div class="nav-wrapper">
-    <a href="/" class="brand-logo">SweetSpot</a>
-    <%# <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>%>
-    <ul class="right hide-on-med-and-down">
+<nav>
+  <div>
+    <a href="/" class=" black-text brand-logo">SweetSpot</a>
+    <a href="#" data-activates="mobile-demo" class=" black-text button-collapse"><i class="material-icons">menu</i></a>
+
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
       <li><a class="black-text" href="/inspiration">Inspiration</a></li>
       <li><a class="black-text" href="/recipes">All Recipes</a></li>
       <li><a class="black-text" href="/recipes/new">Create</a></li>
@@ -10,14 +11,15 @@
         <li><a class="black-text" href="/logout">Logout</a></li>
         <li><a class="black-text" href="/users/<%= loggedInUser._id %>"><%= loggedInUser.username %></a></li>
         <% } else { %>
-          <li><a class="black-text" href="/login">Login</a></li>
-          <li><a class="black-text" href="/register">Sign Up</a></li>
-          <% } %>
-          <%# <ul class="side-nav" id="mobile-demo">
-            <li><a href="/recipes">All Recipes</a></li>
-            <li><a href="/recipes/new">Create</a></li>
-            <li><a href="/login">Login</a></li>
-            <li><a href="#">Img</a></li>
-          </ul>%>
-        </div>
-      </nav>
+        <li><a class="black-text" href="/login">Login</a></li>
+        <li><a class="black-text" href="/register">Sign Up</a></li>
+      <% } %>
+    </ul>
+    <ul class=" right side-nav" id="mobile-demo">
+      <li><a href="/recipes">All Recipes</a></li>
+      <li><a href="/recipes/new">Create</a></li>
+      <li><a href="/login">Login</a></li>
+      <li><a href="#">Img</a></li>
+    </ul>
+  </div>
+</nav>
