@@ -1,4 +1,9 @@
-<h1>Register</h1>
+<% include ../partials/logo %>
+<div class="row 1">
+  <div class="col s3"></div>
+
+  <div class="section col s6">
+<h1 class="center-align">Register</h1>
 
 <% if (locals.message) { %>
   <p><%= message %></p>
@@ -21,6 +26,11 @@
     <label for="passwordConfirmation">Password Confirmation</label>
     <input type="password" name="passwordConfirmation" id="passwordConfirmation" class="form-control">
   </div>
+  <div class="center-align">
+    <button class=" waves-effect waves-light btn">Register</button>
+  </div>
 
-  <button class="btn btn-primary">Register</button>
 </form>
+</div>
+<div class="col s3"></div>
+</div>

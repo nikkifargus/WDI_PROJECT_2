@@ -1,39 +1,51 @@
-<h1>Edit <%= recipe.name %></h1>
+<% include ../partials/logo %>
 
-<form method="POST" action="/recipes/<%= recipe.id %>">
-  <input type="hidden" name="_method" value="PUT">
-  <div>
-    <div>
-    <label for="name">Name</label>
-    <input id="name"name="name"  name="recipe name" placeholder="Recipe Name" value= "<%=recipe.name%>">
+<div class="row 1">
+  <div class="col s2"></div>
 
-    <label for="image">Image</label>
-    <input type="text" id="image" name="image[]" name="recipe image" placeholder="Image URL" value= "<%=recipe.image[0]%>">
+  <div class="section col s8">
+    <h1>Edit <%= recipe.name %></h1>
 
-    <label for="description">Description</label>
-    <textarea id="description" name="description" placeholder="Short description of your product" value= ""><%=recipe.description%></textarea>
+    <form method="POST" action="/recipes/<%= recipe.id %>">
+      <input type="hidden" name="_method" value="PUT">
+      <div>
+        <div>
+          <label for="name">Name</label>
+          <input id="name"name="name"  name="recipe name" placeholder="Recipe Name" value= "<%=recipe.name%>">
+
+          <label for="image">Image</label>
+          <input type="text" id="image" name="image[]" name="recipe image" placeholder="Image URL" value= "<%=recipe.image[0]%>">
+
+          <label for="description">Description</label>
+          <textarea id="description" name="description" placeholder="Short description of your product" value= ""><%=recipe.description%></textarea>
+        </div>
+
+        <div>
+          <label for="ingredient1">Ingredient 1</label>
+          <textarea id="ingredient1" name="ingredient1" name="ingredient1" placeholder="ingredient1" value= ""><%=recipe.ingredient1%></textarea>
+
+          <label for="ingredient2">Ingredient 2</label>
+          <textarea id="ingredient2" name="ingredient2" name="ingredient2" placeholder="ingredient2" value= ""><%=recipe.ingredient2%></textarea>
+
+          <label for="ingredient3">Ingredient 3</label>
+          <textarea id="ingredient3" name="ingredient3" name="ingredient3" placeholder="ingredient3" value= ""><%=recipe.ingredient3%></textarea>
+        </div>
+        <div>
+          <label for="step1">Step 1</label>
+          <textarea id="step1" name="step1" name="step1" placeholder="step 1" value= ""><%=recipe.step1%></textarea>
+
+          <label for="step2">Step 2</label>
+          <textarea id="step2" name="step2"  name="step2" placeholder="step 2" value= ""><%=recipe.step2%></textarea>
+
+          <label for="step3">Step 3</label>
+          <textarea id="step3" name="step3"  name="step3" placeholder="step 3" value=""><%=recipe.step3%></textarea>
+        </div>
+      </div>
+      <div class="row center-align">
+      <button class="waves-effect waves-light btn" type="submit" name="button">Edit Recipe</button>
     </div>
+    </form>
 
-    <div>
-    <label for="ingredient1">Ingredient 1</label>
-    <textarea id="ingredient1" name="ingredient1" name="ingredient1" placeholder="ingredient1" value= ""><%=recipe.ingredient1%></textarea>
-
-    <label for="ingredient2">Ingredient 2</label>
-    <textarea id="ingredient2" name="ingredient2" name="ingredient2" placeholder="ingredient2" value= ""><%=recipe.ingredient2%></textarea>
-
-    <label for="ingredient3">Ingredient 3</label>
-    <textarea id="ingredient3" name="ingredient3" name="ingredient3" placeholder="ingredient3" value= ""><%=recipe.ingredient3%></textarea>
-    </div>
-    <div>
-    <label for="step1">Step 1</label>
-    <textarea id="step1" name="step1" name="step1" placeholder="step 1" value= ""><%=recipe.step1%></textarea>
-
-    <label for="step2">Step 2</label>
-    <textarea id="step2" name="step2"  name="step2" placeholder="step 2" value= ""><%=recipe.step2%></textarea>
-
-    <label for="step3">Step 3</label>
-    <textarea id="step3" name="step3"  name="step3" placeholder="step 3" value=""><%=recipe.step3%></textarea>
-    </div>
   </div>
-  <button type="submit" name="button">Edit Recipe</button>
-</form>
+  <div class="col s2"></div>
+</div>

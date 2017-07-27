@@ -1,4 +1,9 @@
-<h1>Login</h1>
+<% include ../partials/logo %>
+<div class="row 1">
+  <div class="col s3"></div>
+
+  <div class="section col s6">
+<h1 class=" center-align">Login</h1>
 
 <% if (locals.message) { %>
   <p><%= message %></p>
@@ -13,6 +18,12 @@
     <label for="password">Password</label>
     <input type="password" name="password" id="password" class="form-control">
   </div>
-
+<div class="center-align">
   <button class="btn btn-primary">Login</button>
+
+</div>
 </form>
+
+</div>
+<div class="col s3"></div>
+</div>

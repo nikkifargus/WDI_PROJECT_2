@@ -1,5 +1,6 @@
 html {
   font-family: 'Nixie One', cursive;
+  font-weight: 400;
 }
 
 body {
@@ -30,7 +31,6 @@ body {
 
   .indexPhoto{
     height: 200px;
-    background-color: black;
     overflow: hidden;
   }
   .card-text{
@@ -58,4 +58,8 @@ img{
 
 .nav-wrapper .brand-logo img {
     height: 64px;
+}
+
+.chocolate{
+    background-image: url("");
 }

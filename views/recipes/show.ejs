@@ -7,19 +7,20 @@
 
   <div class="col s12 m12 l7">
     <h2><%= recipe.name %></h2>
+    <div class="divider"></div>
     <br>
     <h5>Created by:<a href="/users/<%= recipe.createdBy._id %>"> <%= recipe.createdBy.username %></h5></a>
     <h5><%= recipe.description%></h5>
 
     <div class="row">
-      <div class="col s6">
+      <div class="col s3">
         <% if (recipe.createdBy.id === locals.loggedInUser.id ) { %>
-        <a href="/recipes/<%= recipe.id %>/edit" class="btn btn-primary">Edit</a>
+        <a class="waves-effect waves-light btn" href="/recipes/<%= recipe.id %>/edit" class="">Edit Recipe</a>
       </div>
-      <div class="col s6">
+      <div class="col s3">
         <form method="POST" action="/recipes/<%= recipe.id %>">
           <input type="hidden" name="_method" value="DELETE">
-          <button class="btn btn-danger">Delete</button>
+          <button class="waves-effect waves-light btn">Delete Recipe</button>
           <% } %>
         </form>
       </div>
@@ -28,13 +29,16 @@
 
 </div>
 
-<div class="row">
+<div class=" card row">
   <div class="col s12 m5 l5">
 
     <h4>Ingredients</h4>
+    <div class="divider"></div>
     <ul>
       <li><%= recipe.ingredient1%></li>
+      <br>
       <li><%= recipe.ingredient2%></li>
+      <br>
       <li><%= recipe.ingredient3%></li>
     </ul>
   </div>
@@ -42,9 +46,12 @@
 
 
     <h4>Method</h4>
+    <div class="divider"></div>
     <ul>
       <li><%= recipe.step1%></li>
+      <br>
       <li><%= recipe.step2%></li>
+      <br>
       <li><%= recipe.step3%></li>
     </ul>
   </div>
@@ -56,7 +63,7 @@
 
     <form action="/recipes/<%= recipe._id %>" method="post">
       <input type="text" name="body">
-      <input type="submit" value="Post Comment">
+      <input class="waves-effect waves-light btn" type="submit" value="Post Comment">
     </form>
 
     <ul>
@@ -68,7 +75,7 @@
           <% if (comment.user.id === locals.loggedInUser.id ) { %>
           <form action="/recipes/<%= recipe._id %>/comments/<%= comment._id %>" method="post">
             <input type="hidden" name="_method" value="delete">
-            <input class="btn btn-danger" type="submit" value="Delete Comment">
+            <input class="waves-effect waves-light btn" type="submit" value="Delete Comment">
           </form>
           <% } %>
         </li>

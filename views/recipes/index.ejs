@@ -1,6 +1,8 @@
+<% include ../partials/logo %>
+
 <div class="section row ">
   <div class="col s12">
-  <h4>Have a look at what other Sweet Spot Bakers have been whipping up in the Kitchen...</h4>
+  <h4> What other SweetSpot Bakers have been whipping up in the Kitchen...</h4>
   </div>
 </div>
 
@@ -9,12 +11,12 @@
     <div class="col s12 m4 l3">
       <div class="indexPhotoFrame z-depth-3">
         <div class="indexPhoto">
-          <a href="/recipes/<%= recipe._id%>">
+          <a class="black-text" href="/recipes/<%= recipe._id%>">
           <img src="<%= recipe.image %>">
         </div>
         <div class="indexInfo">
-          <p> <%= recipe.name %><p>
-          <p>By <%= recipe.createdBy.username %></p>
+          <p class="black-text"> <%= recipe.name %></p>
+          <p class="black-text">By <%= recipe.createdBy.username %></p>
         </div>
       </div>
     </div>
