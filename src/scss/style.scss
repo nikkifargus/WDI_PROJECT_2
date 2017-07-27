@@ -1,3 +1,7 @@
+html {
+  font-family: 'Nixie One', cursive;
+}
+
 body {
   background-image: url("http://lovehomedesign-images.s3-us-west-1.amazonaws.com/wp-content/uploads/2017/03/29034558/shutterstock_537353776.jpg");
   nav{
@@ -52,6 +56,15 @@ img{
   height: 100%;
 }
 
-.homeCent{
-  text-align: center;
+h1.logo{
+
+  font-family: 'Nixie One', cursive;
+}
+
+.cupcake{
+  margin-top: 200px;
+}
+
+.login{
+  font-size: 200px
 }

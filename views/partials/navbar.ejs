@@ -4,10 +4,10 @@
     <a href="#" data-activates="mobile-demo" class=" black-text button-collapse"><i class="material-icons">menu</i></a>
 
     <ul id="nav-mobile" class="right hide-on-med-and-down">
-      <li><a class="black-text" href="/inspiration">Inspiration</a></li>
       <li><a class="black-text" href="/recipes">All Recipes</a></li>
       <li><a class="black-text" href="/recipes/new">Create</a></li>
       <% if (locals.isLoggedIn) { %>
+        <li><a class="black-text" href="/inspiration">Inspiration</a></li>
         <li><a class="black-text" href="/logout">Logout</a></li>
         <li><a class="black-text" href="/users/<%= loggedInUser._id %>"><%= loggedInUser.username %></a></li>
         <% } else { %>

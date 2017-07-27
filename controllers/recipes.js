@@ -1,5 +1,4 @@
 const Recipe = require('../models/recipe');
-const User = require('../models/user');
 
 function recipeIndex(req, res, next){
   Recipe
