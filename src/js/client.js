@@ -3,11 +3,12 @@ console.log('client log!');
 $(() => {
   $('.button-collapse').sideNav();
   $('.inspirationLoad').append('<h1>Get some Inspiration</h1>');
+  $('.inspirationLoad').append('<div class="row inspRow"></div>');
   $
   .get('http://api.yummly.com/v1/api/recipes?_app_id=336eb706&_app_key=2345f4bf66c4925c8eef59b889c4816d&q=&allowedCourse[]=course^course-Desserts&maxResult=50')
   .done(data => {
     data.matches.forEach(recipe => {
-      $(`<div class="">
+      $(`<div class="col s12 m4 l4 inspCol">
           <div class=" card inspirationName">
             ${recipe.recipeName}
           </div>
@@ -18,7 +19,7 @@ $(() => {
               <img src="${ recipe.smallImageUrls}">
           </div>
         </div>`)
-    .appendTo($('.inspirationLoad'));
+    .appendTo($('.inspRow'));
 
     });
     $('.inspirationName').on('click', function(e){
