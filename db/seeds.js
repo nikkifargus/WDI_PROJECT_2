@@ -43,15 +43,37 @@ User
         step3: 'cook at 180C for 20 mins or until golden brown. This will depend on how thin you roll the dough',
         createdBy: users[0]._id
       }, {
-        name: 'Chocolate Ganache',
-        image: 'http://img.taste.com.au/hpxXpl8e/taste/2016/11/dark-chocolate-ganache-85514-1.jpeg',
-        description: 'Chocolate ganache is really easy to make and super versatile. Use on cakes, cookies, macarons or even use to make your own chocolate truffels!',
-        ingredient1: '250g dark chocolate',
-        ingredient2: '200g double cream',
-        ingredient3: '50g butter',
-        step1: 'Heat cream and butter until boiling',
-        step2: 'Break chocolate into pieces and add to the cream',
-        step3: 'Stir until all the chocolate is melted, then allow to cool',
+        name: 'Berry Smoothie',
+        image: 'https://sparkpeo.hs.llnwd.net/e2/guid/5-Minute-Berry-Smoothie/d702b10b-cab7-4bbd-92a6-6cf53d2131b6.jpg',
+        description: 'Really easy to make and great for a hot summers day! Added bonus, its pretty healthy!',
+        ingredient1: '1/2 Banana',
+        ingredient2: '1 handful of frozen berries of your choice',
+        ingredient3: 'Fruit juice or water',
+        step1: 'Add all the ingredients to a blender',
+        step2: 'Blend on full speed for 2 mins',
+        step3: 'Pour into a cup and decorate with berries!',
+        createdBy: users[1]._id
+      }, {
+        name: 'Berry Smoothie',
+        image: 'https://sparkpeo.hs.llnwd.net/e2/guid/5-Minute-Berry-Smoothie/d702b10b-cab7-4bbd-92a6-6cf53d2131b6.jpg',
+        description: 'Really easy to make and great for a hot summers day! Added bonus, its pretty healthy!',
+        ingredient1: '1/2 Banana',
+        ingredient2: '1 handful of frozen berries of your choice',
+        ingredient3: 'Fruit juice or water',
+        step1: 'Add all the ingredients to a blender',
+        step2: 'Blend on full speed for 2 mins',
+        step3: 'Pour into a cup and decorate with berries!',
+        createdBy: users[1]._id
+      }, {
+        name: 'Ginger Bread Men',
+        image: 'https://s-media-cache-ak0.pinimg.com/736x/11/9d/2d/119d2d42cf68464baa0604872634c996--christmas-treats-christmas-recipes.jpg',
+        description: 'Not just for Christmas, make these yummy gingerbread men anytime of year.',
+        ingredient1: '',
+        ingredient2: '',
+        ingredient3: '',
+        step1: '',
+        step2: '',
+        step3: '',
         createdBy: users[1]._id
       }]);
   })
