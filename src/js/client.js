@@ -1,4 +1,4 @@
-console.log('client log!');
+// console.log('client log!');
 
 $(() => {
   $('.button-collapse').sideNav();
