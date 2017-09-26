@@ -7,7 +7,6 @@
       <li><a class="black-text" href="/recipes">All Recipes</a></li>
       <li><a class="black-text" href="/recipes/new">Create</a></li>
       <% if (locals.isLoggedIn) { %>
-        <li><a class="black-text" href="/inspiration">Inspiration</a></li>
         <li><a class="black-text" href="/logout">Logout</a></li>
         <li><a class="black-text" href="/users/<%= loggedInUser._id %>"><%= loggedInUser.username %></a></li>
         <% } else { %>

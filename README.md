@@ -14,8 +14,7 @@ The objectives of this project were:
 1) Create an authenticated app
 2) Create an MVC RESTful app using express, EJS and Node.js
 3) Use a NoSQL database
-4) Use an external API
-5) Style using a CSS framework
+4) Style using a CSS framework 
 
 I love to bake and keep all these recipes hand written in a big book stained with chocolate. I cant carry this around with me so often find myself away from home and unable to bake my favourite classics. I also have friends who bake and we often exchange recipes over Facebook or email. I decided to put all this together in an app where I can write my recipes to access from anywhere and also exchange with friends. So based on the criteria above I thought this would be a great opportunity to create a recipe exchange site.
 
