@@ -1,10 +1,10 @@
 // // console.log('client log!');
 //
-// $(() => {
-//   $('.button-collapse').sideNav();
-//   $('.inspirationLoad').append('<h1>Get some Inspiration</h1>');
-//   $('.inspirationLoad').append('<div class="row inspRow"></div>');
-//   $
+$(() => {
+  $('.button-collapse').sideNav();
+  // $('.inspirationLoad').append('<h1>Get some Inspiration</h1>');
+  // $('.inspirationLoad').append('<div class="row inspRow"></div>');
+  // // $
 //   .get('http://api.yummly.com/v1/api/recipes?_app_id=336eb706&_app_key=2345f4bf66c4925c8eef59b889c4816d&q=&allowedCourse[]=course^course-Desserts&maxResult=50')
 //   .done(data => {
 //     data.matches.forEach(recipe => {
@@ -44,7 +44,7 @@
 //     });
 //   })
 //   .fail(() => console.log('error'));
-// });
+});
 //
 //
 //
