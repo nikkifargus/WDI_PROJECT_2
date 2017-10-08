@@ -3,7 +3,7 @@
 <img src="src/images/website.png"></img>
 
 ## Introduction
-This was my first full stack web application in which I made an authenticated RESTful app using Node.js, Express, EJS, an external API and MongoDB. I found this project the most difficult because, as well as the coding languages being a new skill, the concept of implementing multiple interconnecting files was also new.
+This was my first full stack web application in which I made an authenticated RESTful app using Node.js, Express, EJS and MongoDB. I found this project the most difficult because, as well as the coding languages being a new skill, the concept of implementing multiple interconnecting files was also new.
 
 Click <a href="https://warm-oasis-10599.herokuapp.com/">here</a> to have a look at my website.
 
@@ -14,7 +14,7 @@ The objectives of this project were:
 1) Create an authenticated app
 2) Create an MVC RESTful app using express, EJS and Node.js
 3) Use a NoSQL database
-4) Style using a CSS framework 
+4) Style using a CSS framework
 
 I love to bake and keep all these recipes hand written in a big book stained with chocolate. I cant carry this around with me so often find myself away from home and unable to bake my favourite classics. I also have friends who bake and we often exchange recipes over Facebook or email. I decided to put all this together in an app where I can write my recipes to access from anywhere and also exchange with friends. So based on the criteria above I thought this would be a great opportunity to create a recipe exchange site.
 
@@ -33,7 +33,7 @@ Finally I wrote out a to-do list so that I could check off tasks as and when I h
 
 ## Development
 
-First I had to set up Express for my app. To do this I created the package.json file through npm in terminal and after installed Express through npm as well. I then created the index.js file in order to require the necessary and useful modules (eg. morgan, bodyParser etc.), connect to the mongo database, setup the middleware and use the routes.
+First I had to set up Express for my app. To do this I created the package.json file through npm in terminal and then installed Express. I then created the index.js file in order to require the necessary and useful modules (eg. morgan, bodyParser etc.), connect to the mongo database, setup the middleware and use the routes.
 
 For this project I used EJS to create views for each page of the website. So in the index.js I set up the express app by indicating where to find the views and that I was going to use the ejs template language.
 
@@ -81,7 +81,7 @@ app.use((req, res, next) => {
 
 ```
 
-I used both referenced and embedded resources in this project. As you can see in the code below I have used an embedded model for the comments and an referenced model for the createdBy.
+I used both referenced and embedded resources in this project. As you can see in the code below I have used an embedded model for the comments and a referenced model for the createdBy.
 
 ```
 const commentSchema = new mongoose.Schema({
@@ -110,7 +110,7 @@ const recipeSchema = new mongoose.Schema({
 });
 
 ```
-Finally I used Materialize css framework to help style the website. This was my first experience using Materialize. I was able to develop a website that was close to how I had wireframed it, however I preferred using Bootstrap as a css framework. In my next project I would like to try using another framework to expand my knowledge and also see what might be my favourite to work with.
+Finally I used Materialize css framework to help style the website. This was my first experience using Materialize. I was able to develop a website that was close to how I had wireframed it. In my next project I would like to try using another framework to expand my knowledge and also see what might be my favourite to work with.
 
 
 ## Future Improvements
